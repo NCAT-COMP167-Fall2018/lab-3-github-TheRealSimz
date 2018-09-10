@@ -27,9 +27,13 @@ public class PersonalTwitterFeed {
         System.out.println("What's your name, tweeter?");
         
         String tweeterName = keyboard.nextLine();
-        
+        newTweets(tweets, tweeterName);
         System.out.println("Nice to meet you " + tweeterName + "!");
         System.out.println("Enter your tweets and I will add them to your timeline!");
+        
+    }
+    public static String newTweets(String[] tweets, String tweeterName) {
+        Scanner keyboard = new Scanner(System.in);
         
         int numTweets = 0;
         
@@ -52,6 +56,7 @@ public class PersonalTwitterFeed {
         }
         
         System.out.println("Your twitter feed is full");
+        return tweeterName;
     }
     
     public static String getTimeStamp(){
